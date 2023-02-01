@@ -24,7 +24,7 @@
 <div class="champCouleur">
     <div class="champTexte1">
 
-        Bonjour 
+        Les bibliothèques
     </div>
 
 
