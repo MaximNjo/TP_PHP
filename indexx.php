@@ -30,6 +30,7 @@
 
 </div>
 
+<!-- Ceci est LA V2 -->
 
 <main role="main"> ... </main>
 
