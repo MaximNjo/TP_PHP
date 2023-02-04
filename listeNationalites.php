@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="index.css">
+
 <?php 
 
 include "header.php "; 
@@ -13,48 +15,75 @@ $lesNationalites=$req->fetchAll();
 ?>
 
 
-<main role="main"> 
-  <div class="container">
+<!-- Titre + bouton "ajouter nationalité"  -->
 
-  <table class="table table-dark">
+<div class="container">
+
+  <h3>Liste des Nationalités</h3>
+
+  <br>
+  
+  <a href="formAjoutNationalite.php" class='btn btn-sucess'> <img src="Image/plus.png" width="25" > Créer une nationalité</a>
+
+</div>
+
+<br><br>
+
+
+<!-- Tableaux -->
+<div class="container">
+
+<table class="table table-hover table-dark">
     <thead>
       <tr>
-        <th scope="col">LES NATIONALITÉS</th>
-    
+        <td><strong>Numéro</strong></td>
+        <td><strong>Libellé</strong></td>
+        <td><strong>Actions</strong></td>
       </tr>
     </thead>
 
 
-      <?php
-
-      // Afficher la requête nationalite
-
-      foreach($lesNationalites as $nationalite)
-
-      {
-
-        echo "<tr>";
-        echo "<td>$nationalite->libelle</td>";
-        echo "<td>$nationalite->num</td>";
-        echo "</tr>";
+<?php
 
 
-      }
+// Afficher la requête nationalite
 
-      ?>
-  
-    
+foreach($lesNationalites as $nationalite)
+
+  {
+
+  echo "<tr>";
+  echo "<td>$nationalite->num</td>";
+  echo "<td>$nationalite->libelle</td>";
+  echo"
  
-</table>
+  <td>
+  
+    <img src='Image/modifier.png'>
+    <img src='Image/supprimer.png'>
+
+  </td>
+  </tr>
+  
+  ";
+
+  
+
+  }
+
+?>
+  
+  </table>
 
 </div>
 
 
-</main>
+
+<br>
 
 
 <?php 
 
-include "footer.php"; 
+  include "footer.php"; 
 
 ?>

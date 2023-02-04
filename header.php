@@ -15,7 +15,7 @@
 
     
 <nav class="navbar navbar-expand-lg navbar-light couleur">
-        <a class="navbar-brand" href="header.php">Ma Bibliothèque</a>
+        <a class="navbar-brand" href="header.php"><strong>Ma Bibliothèque</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,7 +47,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="listeNationalites.php">Listes nationalités</a>
-                        <a class="dropdown-item" href="#">Ajouter une nationalité</a>
+                        <a class="dropdown-item" href="formAjoutNationalite.php">Ajouter une nationalité</a>
                     </div>
                 </li>
                 
