@@ -36,6 +36,9 @@ a[class="btn nat"]{
     color: white;
     font-weight: bold;
     border: none;
+    border-radius: 6px;
+    width: 160px;
+    height: 35px;
 
 }
 
@@ -68,10 +71,49 @@ button[type="submit"]:hover{
 
 }
 
+/* alignement des boutons */
+
+.col{
+
+    
+    display: flex;
+    
+}
+
 /* input libelle */
 
 input[name="libelle"]{
 
-    width: 300px;
+    width: 267px;
+    border-radius: 3px ;
+    border: none;
+
+}
+
+/* Placement formulaire */
+
+.formulaire{
+
+   
+    margin: auto;
+    padding: 20px;
+    border: solid;
+    border-radius: 3px;
+    width: 25%;
+    min-width: 360px;
+
+
+
+}
+
+.titreH2{
+
+    text-align: center;
+
+
+}
+
+hr{
+background-color: black;
 
 }
