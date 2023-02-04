@@ -2,48 +2,49 @@
 
 include "header.php "; 
 include "connexionPDO.php "; 
-$req = $monPDO -> prepare ("select * from nationalte");
-$req -> setFetchMode(PDO::FETCH_OBJ);
-$req -> execute();
-$lesNationalites = $req -> fetchAll();
 
+// Création requete nationalite
+
+$req=$monPdo->prepare("select * from nationalite");
+$req->setFetchMode(PDO::FETCH_OBJ);
+$req->execute();
+$lesNationalites=$req->fetchAll();
 
 ?>
 
 
 <main role="main"> 
+  <div class="container">
 
-<div class="container">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">LES NATIONALITÉS</th>
+    
+      </tr>
+    </thead>
 
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+
+      <?php
+
+      // Afficher la requête nationalite
+
+      foreach($lesNationalites as $nationalite)
+
+      {
+
+        echo "<tr>";
+        echo "<td>$nationalite->libelle</td>";
+        echo "<td>$nationalite->num</td>";
+        echo "</tr>";
+
+
+      }
+
+      ?>
+  
+    
+ 
 </table>
 
 </div>
