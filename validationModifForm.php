@@ -2,13 +2,14 @@
 include "header.php";
 include "connexionPDO.php";
 
-
+// le num
+$num = $_POST["num"];
 // le libelle
 $libelle = $_POST["libelle"];
 
 
 // requête libelle
-$req=$monPdo->prepare("insert into nationalite(libelle) values (:libelle)");
+$req=$monPdo->prepare("update nationalite set libelle = :libelle where num = :num)");
 $req->bindParam(':libelle', $libelle);
 $nb = $req->execute();
 

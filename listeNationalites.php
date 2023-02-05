@@ -58,8 +58,9 @@ foreach($lesNationalites as $nationalite)
   echo"
  
   <td>
-  
-    <img src='Image/modifier.png'>
+    <a href='formModifNationalite.php?num=$nationalite->num'>
+      <img src='Image/modifier.png'>
+    </a>
     <img src='Image/supprimer.png'>
 
   </td>
