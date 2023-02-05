@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
+ 
     <!-- Barre de navigation -->
     
     <!-- Navbar -->

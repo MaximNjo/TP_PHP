@@ -14,7 +14,7 @@ $lesNationalites=$req->fetchAll();
 
 ?>
 
-
+  
 <!-- Titre + bouton "ajouter nationalité"  -->
 
 <div class="container">

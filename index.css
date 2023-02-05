@@ -117,3 +117,21 @@ hr{
 background-color: black;
 
 }
+
+/* couleur validation formulaire */
+
+.alert.alert-sucess {
+
+    background-color: rgb(51, 224, 8);
+    
+
+    
+}
+
+.alert.alert-danger {
+
+    background-color: rgb(237, 114, 20);
+    
+
+    
+}
