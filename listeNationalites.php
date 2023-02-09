@@ -23,7 +23,7 @@ $lesNationalites=$req->fetchAll();
 
   <br>
   
-  <a href="formAjoutNationalite.php" class='btn btn-sucess'> <img src="Image/plus.png" width="25" > Créer une nationalité</a>
+  <a href="formNationalite.php?action=Ajouter" class='btn btn-sucess'> <img src="Image/plus.png" width="25" > Créer une nationalité</a>
 
 </div>
 
@@ -58,7 +58,7 @@ foreach($lesNationalites as $nationalite)
   echo"
  
   <td>
-    <a href='formModifNationalite.php?num=$nationalite->num'>
+    <a href='formNationalite.php?action=Modifier&num=$nationalite->num'>
       <img src='Image/modifier.png'>
     </a>
     <img src='Image/supprimer.png'>
