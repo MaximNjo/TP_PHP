@@ -35,7 +35,7 @@ if($action == "Modifier"){
 
 <div class="formulaire">
 
-    <form action="valideFormNationalite.php" method="post" >
+    <form action="valideFormNationalite.php?action=<?php echo $action; ?>" method="post" >
     
     <div class="form-group">
         

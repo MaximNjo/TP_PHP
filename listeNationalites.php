@@ -62,18 +62,22 @@ foreach($lesNationalites as $nationalite)
       <img src='Image/modifier.png'>
     </a>
     
-    <img src='Image/supprimer.png'>
-
-  </td>
-  </tr>
-  
-  ";
-
-  
-
+    <a href=''>
+      
+      <img src='Image/supprimer.png'>
+    
+    </a>
+    
+    </td>
+    </tr>
+    
+    ";
+    
+    
+    
   }
-
-?>
+  
+  ?>
   
   </table>
 

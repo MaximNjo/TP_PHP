@@ -2,17 +2,27 @@
 include "header.php";
 include "connexionPDO.php";
 
-// le num
+$action = $_GET['action'];
 $num = $_POST["num"];
-// le libelle
 $libelle = $_POST["libelle"];
 
 
 // requête libelle
-$req=$monPdo->prepare("update nationalite set libelle = :libelle where num = :num");
-$req->bindParam(':num', $num);
-$req->bindParam(':libelle', $libelle);
+    if($action == "Modifier"){
+    $req=$monPdo->prepare("update nationalite set libelle = :libelle where num = :num");
+    $req->bindParam(':num', $num);
+    $req->bindParam(':libelle', $libelle);
+    $nb = $req->execute();
+} else {
+
+    $req=$monPdo->prepare("insert into nationalite(libelle) values (:libelle)");
+    $req->bindParam(':libelle', $libelle);
+    
+    
+}
+
 $nb = $req->execute();
+$message = $action == "Modifier" ? "modifiée" : "ajoutée";
 
 if($nb == 1){
 
@@ -22,7 +32,7 @@ if($nb == 1){
 
         <div class='alert alert-sucess'>
         
-            La nationalité a bien été modifié
+            La nationalité a bien été " . $message . "
 
         </div>
     
@@ -35,7 +45,7 @@ if($nb == 1){
     
         <div class='alert alert-danger'>
 
-            La nationalité n'a pas été modifié
+            La nationalité n'a pas été " . $message . "
         
         </div>
     
