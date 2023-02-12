@@ -61,6 +61,7 @@ foreach($lesNationalites as $nationalite)
     <a href='formNationalite.php?action=Modifier&num=$nationalite->num'>
       <img src='Image/modifier.png'>
     </a>
+    
     <img src='Image/supprimer.png'>
 
   </td>
