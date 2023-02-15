@@ -1,9 +1,8 @@
 <?php
-$hostnom = 'host=localhost';
-$usernom = 'root';
-$password = '';
-$bdd = 'biblioo';
-$bdd = 'bibliotheque';
+$hostnom = 'host=btssio.dedyn.io';
+$usernom = 'NJOBOJO';
+$password = '03/03/2004';
+$bdd = 'NJOBOJO_biblio';
  
 try { 
     $monPdo = new PDO("mysql:$hostnom;dbname=$bdd;charset=utf8", $usernom, $password);
@@ -12,4 +11,4 @@ try {
     echo $e->getMessage();
     $monPdo = null;
 }
-?>
+?> 
