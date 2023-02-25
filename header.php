@@ -46,7 +46,7 @@
                         Gestion des nationalités
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="listeNationalites.php">Listes nationalités</a>
+                        <a class="dropdown-item" href="listeNationalites.php#">Listes nationalités</a>
                         <a class="dropdown-item" href="formAjoutNationalite.php">Ajouter une nationalité</a>
                     </div>
                 </li>

@@ -1,6 +1,6 @@
 body{
 
-    background-color: rgb(216, 5, 5);
+    background-color: rgb(106, 6, 6);
     color: aliceblue
 
 }
@@ -134,4 +134,14 @@ background-color: black;
     
 
     
+}
+
+/* Dialecte */
+
+
+.dialecte{
+
+
+    color: rgb(143, 8, 8);
+
 }

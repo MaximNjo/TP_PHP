@@ -59,10 +59,12 @@ foreach($lesNationalites as $nationalite)
  
   <td>
     <a href='formNationalite.php?action=Modifier&num=$nationalite->num'>
+
       <img src='Image/modifier.png'>
+
     </a>
     
-    <a href=''>
+    <a href='#modalSupression' data-toggle='modal'  data-suppression='supprimerNationalite.php?num=$nationalite->num'>
       
       <img src='Image/supprimer.png'>
     
@@ -76,7 +78,7 @@ foreach($lesNationalites as $nationalite)
     
     
   }
-  
+  //'supprimerNationalite.php?num=$nationalite->num'
   ?>
   
   </table>
@@ -86,7 +88,29 @@ foreach($lesNationalites as $nationalite)
 
 
 <br>
+<!-- Boîtes de dialogue -->
+<div class="dialecte">
 
+  
+  <div id="modalSupression" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ATTENTION</h5>
+        </div>
+        <div class="modal-body">
+          <p>Voulez vous supprimer cette nationalité !</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Ne pas supprimer</button>
+          <a href="" type="button" id="btnSuppr" class="btn btn-danger" >Supprimer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>
 
 <?php 
 
