@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="couleur.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body> 
  
     <!-- Barre de navigation -->
     

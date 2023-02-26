@@ -14,48 +14,17 @@ $nb = $req->execute();
     
 if($nb == 1){
 
-    echo "
-    
-    <div class='container'>
-
-        <div class='alert alert-sucess'>
-        
-            La nationalité a bien été supprimé 
-
-        </div>
-    
-    ";
+    $_SESSION['message']=['sucess'=>'La nationalité a bien été supprimé '];
 
 
 } else{
 
-    echo "
+    $_SESSION['message']=['danger'=>'La nationalité n"a pas été supprimé '];
     
-        <div class='alert alert-danger'>
-
-            Promblème : La nationalité n'a pas été supprimé
-        
-        </div>
-    
-    </div>
-
-    ";
-
 }
 
-?>
-
-<a href="listeNationalites.php" class="btn nat">Revenir à la listes</a>
-
-<br><br>
-
-
-
-
-
-
-<?php
-
-include 'footer.php';
+header('location: listeNationalites.php');
+exit();
 
 ?>
+
