@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="index.css">
-
 <?php 
 
 include "header.php "; 
 include "connexionPDO.php "; 
-@$action = $_GET['action'];
+// $action = $_GET['action'];
+
 
 // Création requete nationalite
 $libelle = "";
@@ -24,7 +23,6 @@ if(!empty($_GET)){
 
 $texteReq.= " order by n.libelle";
 
-
 $req=$monPdo->prepare($texteReq);
 $req->setFetchMode(PDO::FETCH_OBJ);
 $req->execute();
@@ -43,7 +41,6 @@ if(!empty($_SESSION['message'])){
   foreach($mesMessages as $key=>$message){
 
     echo '
-    
       <div class="alert alert-' .$key. ' alert-dismissible fade show" role="alert">
 
         ' .$message . '
@@ -52,15 +49,9 @@ if(!empty($_SESSION['message'])){
          <span aria-hidden="true">&times;</span>
          </button>
 
-    </div>
- 
-    ';
-
+    </div>';
   }
-
   $_SESSION['message']=[];
-
-
 }
 
 ?>
@@ -176,13 +167,11 @@ foreach($lesNationalites as $nationalite)
     </tr>
     
     ";
-    
-    
-    
+
   }
 
   ?>
-  
+
   </table>
 
 </div>
@@ -215,7 +204,6 @@ foreach($lesNationalites as $nationalite)
 </div>
 
 <?php 
-
   include "footer.php"; 
 
 ?>
